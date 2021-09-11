@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  --transition: all 0.4s cubic-bezier(0.17, 0.67, 0.45, 0.6);
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+
+.box .bg-dark {
+  background-size: contain;
+  background-position: center center;
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+
+.box .bg-one {
+  background: url("./bg-dark.jpg") no-repeat;
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.box .text,
+.box .text-two {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box .bg-two {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url("./bg-dark-2.jpg") no-repeat;
+}
+
+.box:hover .bg-one {
+  -webkit-clip-path: inset(0% 100% 0% 0%);
+          clip-path: inset(0% 100% 0% 0%);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+/*# sourceMappingURL=styles.css.map */
